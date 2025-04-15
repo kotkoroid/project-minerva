@@ -1,0 +1,19 @@
+{
+  "name": "gateway",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite serve",
+    "build": "vite build",
+    "preview": "bun run build && vite preview",
+    "deploy": "bun run build && wrangler deploy --minify"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.0.6",
+    "@cloudflare/workers-types": "^4.20250415.0",
+    "hono": "^4.7.6",
+    "vite": "^6.2.6",
+    "wrangler": "^4.11.0"
+  }
+}

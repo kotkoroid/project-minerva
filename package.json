@@ -1,0 +1,7 @@
+{
+  "name": "project-minerva",
+  "private": true,
+  "workspaces": [
+    "gateway"
+  ]
+}
