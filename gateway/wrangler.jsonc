@@ -2,5 +2,11 @@
 	"$schema": "../node_modules/wrangler/config-schema.json",
 	"name": "gateway",
 	"main": "src/index.ts",
-	"compatibility_date": "2025-04-10"
+	"compatibility_date": "2025-04-10",
+	"services": [
+		{
+			"binding": "AUTH_SERVICE",
+			"service": "auth-service"
+		}
+	]
 }
