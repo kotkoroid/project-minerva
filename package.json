@@ -1,19 +1,21 @@
 {
-  "name": "project-minerva",
-  "private": true,
-  "scripts": {
-    "types": "bun --filter '*' types",
-    "typecheck": "bun --filter '*' typecheck"
-  },
-  "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.0.6",
-    "@cloudflare/workers-types": "^4.20250415.0",
-    "typescript": "^5.8.3",
-    "vite": "^6.2.6",
-    "wrangler": "^4.11.0"
-  },
-  "workspaces": [
-    "gateway",
-    "services/*"
-  ]
+	"name": "project-minerva",
+	"private": true,
+	"scripts": {
+		"types": "bun --filter '*' types",
+		"typecheck": "bun --filter '*' typecheck",
+		"codecheck": "biome check --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.0-beta.1",
+		"@cloudflare/vite-plugin": "^1.0.6",
+		"@cloudflare/workers-types": "^4.20250415.0",
+		"typescript": "^5.8.3",
+		"vite": "^6.2.6",
+		"wrangler": "^4.11.0"
+	},
+	"workspaces": [
+		"gateway",
+		"services/*"
+	]
 }

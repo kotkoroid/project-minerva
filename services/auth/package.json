@@ -4,9 +4,10 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-	  "dev": "vite serve",
+		"dev": "vite serve",
 		"deploy": "wrangler deploy --minify",
 		"types": "wrangler types",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"codecheck": "biome check --write"
 	}
 }

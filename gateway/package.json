@@ -1,17 +1,18 @@
 {
-  "name": "gateway",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite serve",
-    "build": "vite build",
-    "preview": "bun run build && vite preview",
-    "deploy": "bun run build && wrangler deploy --minify",
-    "types": "wrangler types",
-    "typecheck": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "hono": "^4.7.6"
-  }
+	"name": "gateway",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite serve",
+		"build": "vite build",
+		"preview": "bun run build && vite preview",
+		"deploy": "bun run build && wrangler deploy --minify",
+		"types": "wrangler types",
+		"typecheck": "tsc --noEmit",
+		"codecheck": "biome check --write"
+	},
+	"devDependencies": {
+		"hono": "^4.7.6"
+	}
 }

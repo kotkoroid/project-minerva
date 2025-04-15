@@ -17,3 +17,6 @@ jobs:
 
       - name: Run typecheck
         run: bun run typecheck
+
+      - name: Run codecheck
+        run: bun biome ci
