@@ -1,1 +1,1 @@
-# project-minerva
+# minerva
