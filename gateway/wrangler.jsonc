@@ -6,7 +6,7 @@
 	"services": [
 		{
 			"binding": "AUTH_SERVICE",
-			"service": "auth-service"
+			"service": "minerva-auth"
 		}
 	]
 }
