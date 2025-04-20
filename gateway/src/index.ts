@@ -1,8 +1,13 @@
 import { Hono } from 'hono';
 
-const app = new Hono();
+// TODO: https://github.com/cloudflare/workers-sdk/issues/8902
+interface GatewayRpcEnv extends GatewayEnv {
+	AUTH_SERVICE: Service<import('@minerva/auth/src/index').default>;
+}
 
-app.get('/', (c) => {
+const app = new Hono<{ Bindings: GatewayRpcEnv }>();
+
+app.get('/', async (c) => {
 	return c.text('Hello Hono!');
 });
 

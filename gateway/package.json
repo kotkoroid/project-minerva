@@ -1,5 +1,5 @@
 {
-	"name": "gateway",
+	"name": "@minerva/gateway",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -8,8 +8,8 @@
 		"build": "vite build",
 		"preview": "bun run build && vite preview",
 		"deploy": "bun run build && wrangler deploy --minify",
-		"types": "wrangler types",
-		"typecheck": "tsc --noEmit",
+		"types": "wrangler types --include-runtime false --env-interface GatewayEnv",
+		"typecheck": "tsc",
 		"codecheck": "biome check --write"
 	},
 	"devDependencies": {
