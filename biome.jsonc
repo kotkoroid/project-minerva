@@ -1,7 +1,12 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.0.0-beta.1/schema.json",
 	"files": {
-		"includes": ["**", "!bun.lock", "!**/worker-configuration.d.ts"]
+		"includes": [
+			"**",
+			"!bun.lock",
+			"!**/worker-configuration.d.ts",
+			"!**/src/database/migrations"
+		]
 	},
 	"vcs": {
 		"enabled": true,
