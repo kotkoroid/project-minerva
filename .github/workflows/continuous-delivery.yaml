@@ -1,0 +1,46 @@
+name: Continuous Delivery
+
+# TODO: Use this trigger instead of `push` after the development gets more serious
+# on:
+#   pull_request:
+#     types:
+#       - closed
+on: [push]
+
+jobs:
+  CD:
+    # TODO: Use this condition after the development gets more serious
+    # if: github.event.pull_request.merged
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check-out repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Deploy infrastructure
+        run: bun sst deploy
+
+      - name: Deploy - Auth Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          postCommands: |
+            wrangler d1 migrations apply auth-d1
+          workingDirectory: "./services/auth"
+
+      - name: Build - Gateway Worker
+        run: bun run build
+        working-directory: ./gateway
+
+      - name: Deploy - Gateway Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: "./gateway"

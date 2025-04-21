@@ -8,7 +8,10 @@ Thumbs.dll
 # Dependencies
 node_modules
 
-# Build
+# SST
+.sst
+
+# Vite
 dist
 
 # Runtime
