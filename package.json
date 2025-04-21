@@ -10,6 +10,8 @@
 		"@biomejs/biome": "^2.0.0-beta.1",
 		"@cloudflare/vite-plugin": "^1.0.8",
 		"@cloudflare/workers-types": "^4.20250420.0",
+		"drizzle-kit": "^0.31.0",
+		"drizzle-orm": "^0.42.0",
 		"typescript": "^5.8.3",
 		"vite": "^6.3.2",
 		"wrangler": "^4.12.0"

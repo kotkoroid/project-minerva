@@ -5,8 +5,9 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite serve",
-		"deploy": "wrangler deploy --minify",
 		"types": "wrangler types --include-runtime false --env-interface AuthEnv",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "wrangler d1 migrations apply auth-d1",
 		"typecheck": "tsc",
 		"codecheck": "biome check --write"
 	}
