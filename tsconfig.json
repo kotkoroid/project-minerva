@@ -16,7 +16,8 @@
 		"types": [
 			"@cloudflare/workers-types",
 			"@minerva/gateway/worker-configuration.d.ts",
-			"@minerva/auth/worker-configuration.d.ts"
+			"@minerva/auth/worker-configuration.d.ts",
+			"node"
 		]
 	}
 }
