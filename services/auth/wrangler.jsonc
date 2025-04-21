@@ -7,7 +7,7 @@
 		{
 			"binding": "DB_AUTH",
 			"database_name": "auth-d1",
-			"database_id": "00000000-0000-0000-0000-000000000000",
+			"database_id": "a820a498-1cee-47ff-af35-fd30948cb1ad",
 			"migrations_dir": "./src/database/migrations"
 		}
 	]
