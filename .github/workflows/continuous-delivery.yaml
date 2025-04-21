@@ -34,7 +34,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           postCommands: |
-            wrangler d1 migrations apply auth-d1
+            wrangler d1 migrations apply auth-d1 --remote
           workingDirectory: "./services/auth"
 
       - name: Build - Gateway Worker
