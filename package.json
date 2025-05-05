@@ -12,7 +12,7 @@
 		"@cloudflare/workers-types": "^4.20250429.0",
 		"@types/node": "^22.15.3",
 		"drizzle-kit": "^0.31.0",
-		"drizzle-orm": "^0.42.0",
+		"drizzle-orm": "^0.43.1",
 		"sst": "^3.13.20",
 		"typescript": "^5.8.3",
 		"vite": "^6.3.4",
