@@ -12,12 +12,8 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"target": "ESNext",
-		"types": [
-			"@cloudflare/workers-types",
-			"@minerva/gateway/worker-configuration.d.ts",
-			"@minerva/auth/worker-configuration.d.ts",
-			"node"
-		]
-	}
+		"target": "ESNext"
+	},
+	// TODO: https://github.com/cloudflare/workers-sdk/issues/9135
+	"include": ["./gateway/worker-configuration.d.ts", "./services/auth/worker-configuration.d.ts"]
 }
