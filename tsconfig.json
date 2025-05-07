@@ -15,5 +15,8 @@
 		"target": "ESNext"
 	},
 	// TODO: https://github.com/cloudflare/workers-sdk/issues/9135
-	"include": ["./gateway/worker-configuration.d.ts", "./services/auth/worker-configuration.d.ts"]
+	"include": [
+		"./gateway/worker-configuration.d.ts",
+		"./services/auth/worker-configuration.d.ts"
+	]
 }
