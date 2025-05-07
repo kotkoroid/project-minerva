@@ -2,8 +2,8 @@
 	"name": "minerva",
 	"private": true,
 	"scripts": {
-		"types": "bun --elide-lines 0 --filter '*' types",
-		"typecheck": "bun --elide-lines 0 --filter '*' typecheck",
+		"types": "bun --filter '*' types",
+		"typecheck": "bun --filter '*' typecheck",
 		"codecheck": "biome check --write"
 	},
 	"devDependencies": {
