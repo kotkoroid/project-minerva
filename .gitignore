@@ -16,3 +16,4 @@ dist
 
 # Runtime
 .wrangler
+worker-configuration.d.ts
