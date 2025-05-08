@@ -16,11 +16,11 @@
 	},
 	"files": [],
 	"references": [
-  	{
-  	  "path": "@minerva/gateway/tsconfig.jsonc"
-  	},
-  	{
-  	  "path": "@minerva/auth/tsconfig.jsonc"
-  	}
-	],
+		{
+			"path": "@minerva/gateway/tsconfig.jsonc"
+		},
+		{
+			"path": "@minerva/auth/tsconfig.jsonc"
+		}
+	]
 }
