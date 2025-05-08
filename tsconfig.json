@@ -14,9 +14,13 @@
 		"strict": true,
 		"target": "ESNext"
 	},
-	// TODO: https://github.com/cloudflare/workers-sdk/issues/9135
-	"include": [
-		"./gateway/worker-configuration.d.ts",
-		"./services/auth/worker-configuration.d.ts"
-	]
+	"files": [],
+	"references": [
+  	{
+  	  "path": "@minerva/gateway/tsconfig.jsonc"
+  	},
+  	{
+  	  "path": "@minerva/auth/tsconfig.jsonc"
+  	}
+	],
 }
