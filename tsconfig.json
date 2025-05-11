@@ -1,7 +1,5 @@
 {
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": false,
 		"erasableSyntaxOnly": true,
 		"esModuleInterop": true,
 		"exactOptionalPropertyTypes": true,
@@ -14,13 +12,5 @@
 		"strict": true,
 		"target": "ESNext"
 	},
-	"files": [],
-	"references": [
-		{
-			"path": "@minerva/gateway/tsconfig.jsonc"
-		},
-		{
-			"path": "@minerva/auth/tsconfig.jsonc"
-		}
-	]
+	"exclude": ["sst.config.ts"]
 }

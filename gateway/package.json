@@ -8,7 +8,6 @@
 		"build": "vite build",
 		"preview": "bun run build && vite preview",
 		"types": "wrangler types --env-interface GatewayEnv",
-		"typecheck": "tsc",
 		"codecheck": "biome check --write"
 	},
 	"devDependencies": {

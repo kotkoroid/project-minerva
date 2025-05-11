@@ -3,7 +3,7 @@
 	"private": true,
 	"scripts": {
 		"types": "bun --filter '*' types",
-		"typecheck": "bun --filter '*' typecheck",
+		"typecheck": "tsc",
 		"codecheck": "biome check --write"
 	},
 	"devDependencies": {
