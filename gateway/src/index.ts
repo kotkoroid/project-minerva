@@ -2,12 +2,7 @@ import { Hono } from 'hono';
 import { validator } from 'hono/validator';
 import { z } from 'zod';
 
-// TODO: https://github.com/cloudflare/workers-sdk/issues/8902
-interface GatewayRpcEnv extends GatewayEnv {
-	AUTH_SERVICE: Service<import('@minerva/auth/src/index').default>;
-}
-
-const app = new Hono<{ Bindings: GatewayRpcEnv }>();
+const app = new Hono<{ Bindings: Env }>();
 
 app.get('/', async (c) => {
 	return c.text('API is up and running. kthxbye');

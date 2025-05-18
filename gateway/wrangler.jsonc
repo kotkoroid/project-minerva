@@ -10,7 +10,8 @@
 	"services": [
 		{
 			"binding": "AUTH_SERVICE",
-			"service": "minerva-auth"
+			"service": "minerva-auth",
+			"entrypoint": "AuthService"
 		}
 	]
 }

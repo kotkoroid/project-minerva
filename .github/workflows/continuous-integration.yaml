@@ -15,9 +15,6 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Generate Workers types
-        run: bun types
-
       - name: Run typecheck
         run: bun typecheck
 

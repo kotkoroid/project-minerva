@@ -9,13 +9,18 @@ import {
 import type { DrizzleD1Database } from 'drizzle-orm/d1';
 import { drizzle } from 'drizzle-orm/d1';
 
-export default class extends WorkerEntrypoint<AuthEnv> {
+// TODO: https://github.com/cloudflare/workers-sdk/issues/9229
+export interface Env {
+	DB_AUTH: D1Database;
+}
+
+export class AuthService extends WorkerEntrypoint {
 	private database: DrizzleD1Database<typeof schema>;
 
-	constructor(ctx: ExecutionContext, env: AuthEnv) {
+	constructor(ctx: ExecutionContext, env: Env) {
 		super(ctx, env);
 
-		this.database = drizzle(this.env.DB_AUTH);
+		this.database = drizzle(env.DB_AUTH);
 	}
 
 	async fetch() {

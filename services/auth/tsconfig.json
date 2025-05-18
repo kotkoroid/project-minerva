@@ -1,6 +1,10 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"types": ["@minerva/auth/worker-configuration.d.ts", "node"]
+		"types": [
+			"@cloudflare/workers-types",
+			"@minerva/auth/worker-configuration.d.ts",
+			"node"
+		]
 	}
 }
