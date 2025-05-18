@@ -14,6 +14,12 @@ export interface Env {
 	DB_AUTH: D1Database;
 }
 
+export default class extends WorkerEntrypoint {
+	async fetch() {
+		return new Response('Auth service is up and running. kthxbye');
+	}
+}
+
 export class AuthService extends WorkerEntrypoint {
 	private database: DrizzleD1Database<typeof schema>;
 
@@ -21,10 +27,6 @@ export class AuthService extends WorkerEntrypoint {
 		super(ctx, env);
 
 		this.database = drizzle(env.DB_AUTH);
-	}
-
-	async fetch() {
-		return new Response('Auth service is up and running. kthxbye');
 	}
 
 	async checkEmailAvailability({ email }: { email: string }) {
