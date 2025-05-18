@@ -15,7 +15,7 @@ export interface Env {
 }
 
 export default class extends WorkerEntrypoint {
- 	async fetch() {
+	async fetch() {
 		return new Response('Auth service is up and running. kthxbye');
 	}
 }
