@@ -1,6 +1,6 @@
 import { WorkerEntrypoint } from 'cloudflare:workers';
 import { randomUUID } from 'node:crypto';
-import * as schema from '@minerva/auth/src/database/schema';
+import type * as schema from '@minerva/auth/src/database/schema';
 import {
 	createUser,
 	getUserByEmail,
