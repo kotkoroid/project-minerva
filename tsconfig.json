@@ -12,5 +12,8 @@
 		"strict": true,
 		"target": "ESNext"
 	},
-	"exclude": ["sst.config.ts"]
+	"exclude": ["sst.config.ts"],
+	// TODO: I think we can make it work without explicitely declaring it here
+	"include": ["./services/auth/worker-configuration.d.ts", "./gateway/worker-configuration.d.ts"]
 }
+ 
