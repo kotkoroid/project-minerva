@@ -9,10 +9,10 @@ import {
 import type { DrizzleD1Database } from 'drizzle-orm/d1';
 import { drizzle } from 'drizzle-orm/d1';
 
-export default class extends WorkerEntrypoint<Env> {
+export default class extends WorkerEntrypoint<AuthEnv> {
 	readonly database: DrizzleD1Database<typeof schema>;
 
-	constructor(ctx: ExecutionContext, env: Env) {
+	constructor(ctx: ExecutionContext, env: AuthEnv) {
 		super(ctx, env);
 
 		this.database = drizzle(this.env.DB_AUTH);

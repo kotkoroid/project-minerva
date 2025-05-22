@@ -14,5 +14,8 @@
 	},
 	"exclude": ["./sst.config.ts"],
 	// TODO: I think we can make it work without explicitely declaring it here
-	"include": ["./services/auth/worker-configuration.d.ts"]
+	"include": [
+		"./gateway/worker-configuration.d.ts",
+		"./services/auth/worker-configuration.d.ts"
+	]
 }
